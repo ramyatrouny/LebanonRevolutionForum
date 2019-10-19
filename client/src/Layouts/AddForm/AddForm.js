@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './AddForm.css'
-import TwitterInput from '../TwitterInput/TwitterInput';
+// import TwitterInput from '../TwitterInput/TwitterInput';
 import { connect } from 'react-redux'
 
 import { submitPost } from '../../actions/post';
@@ -51,7 +51,7 @@ class AddForm extends Component {
                         <input type="submit" className="submissionPost" value="Submit Post" />
                         <p style={{ marginTop: '12px' }}>Please don't swear and try to be gentle in your post - رجاءً لا للشتائم </p>
                         <p>Each person is allowed 1 Post per hour</p>
-                        
+
                     </div>
                 </form>
             </div>
