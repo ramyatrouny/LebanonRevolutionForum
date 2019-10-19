@@ -1,0 +1,45 @@
+.submitPost {
+    border: 1px solid #333333;
+    padding: 20px;
+    text-align: center;
+    background: white;
+}
+
+.submitPost h2 {
+    height: 45px;
+    font-size: 19pt;
+}
+
+.submitInput {
+    width: 650px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.submissionPost {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 350px;
+    color: white;
+    background: #343a40!important;
+    border: none;
+}
+
+@media only screen and (max-width: 414px) {
+    .submitPost h2 {
+        height: 45px;
+        font-size: 12pt;
+    }
+
+    .submitInput{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .submissionPost{
+        width: 90% !important;
+    }
+}

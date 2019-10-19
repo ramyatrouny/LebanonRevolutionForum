@@ -1,0 +1,40 @@
+.postsBox {
+    position: relative;
+    background: #d3d3d3;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    word-break: break-all;
+}
+
+.postsBox:hover {
+    background: #9b9a9a;
+    color: white;
+}
+
+.posts-list {
+    margin-top: 60px;
+}
+
+.postcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.creationDate {
+    float: right;
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media only screen and (max-width: 414px) {
+    .postcontainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

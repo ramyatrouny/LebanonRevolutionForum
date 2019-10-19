@@ -1,0 +1,29 @@
+.navbar-brand{
+    letter-spacing: 4px;
+}
+
+.nav-item{
+    letter-spacing: 2px;
+}
+
+.navbar{
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+}
+
+.navbar-dark .navbar-brand {
+    color: white !important;
+}
+
+.defaultSpacing{
+    padding: 0 80px;
+}
+
+@media only screen and (max-width: 411px){
+    .nav {
+        width: 100%;
+    }
+}
