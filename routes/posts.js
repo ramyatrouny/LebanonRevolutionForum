@@ -34,7 +34,7 @@ router.get('/', [
 });
 
 router.post('/latest', async (req, res) => {
-    const posts = await Posts.find().limit(25).sort({ createdAt: -1 });
+    const posts = await Posts.find().limit(100).sort({ createdAt: -1 });
 
     return res.status(httpCodes.OK).json({
         status: 'success',
