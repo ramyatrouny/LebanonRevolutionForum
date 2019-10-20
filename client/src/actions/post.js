@@ -16,7 +16,7 @@ export const getCurrentPosts = () => async dispatch => {
     } catch (err) {
         dispatch({
             type: FAIL_GET_POSTS,
-            payload: { msg: err.response.statusText, status: err.response.status }
+            payload: { msg: err.response.msg, status: err.response.status }
         })
     }
 }
@@ -27,20 +27,21 @@ export const submitPost = (post) => async dispatch => {
         body.set('post', post);
 
         const res = await axios.post('/posts/AddPost', body);
-        
-        
+
+
         dispatch({
             type: SUBMIT_POST,
             payload: res.newPost
         });
-        
+
         dispatch(getCurrentPosts());
 
-        
+
 
     } catch (err) {
         dispatch({
-            type: FAIL_POST_SUBMISSION
+            type: FAIL_POST_SUBMISSION,
+            payload: { msg: err.response.msg, status: err.response.status }
         })
     }
 }
