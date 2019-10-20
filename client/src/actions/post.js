@@ -5,7 +5,7 @@ import { GET_POSTS, FAIL_GET_POSTS } from '../actions/types';
 // GET CURRENT USERS PROFILE
 export const getCurrentPosts = () => async dispatch => {
     try {
-        const res = await axios.get('/posts/latest');
+        const res = await axios.post('/posts/latest');
 
         dispatch({
             type: GET_POSTS,

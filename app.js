@@ -31,8 +31,6 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-
-
 dbConnect();
 
 app.use('/posts', postsRoute);
