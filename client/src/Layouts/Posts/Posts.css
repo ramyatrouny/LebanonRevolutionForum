@@ -38,3 +38,9 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media only screen and (max-width: 430px){
+    .postcontainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
