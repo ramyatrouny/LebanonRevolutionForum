@@ -67,12 +67,12 @@ router.post('/addPost', [
             let duration = dur.asMinutes();
 
             
-//            if (duration < 60) {
-//                return res.status(httpCodes.BAD_REQUEST).json({
-//                    status: 'error',
-//                    msg: 'Only 1 Post per hour'
-//                })
-//            }
+           if (duration < 60) {
+               return res.status(httpCodes.BAD_REQUEST).json({
+                   status: 'error',
+                   msg: 'Only 1 Post per hour'
+               })
+           }
 
         }
 
