@@ -3,6 +3,7 @@ var router = express.Router();
 var Posts = require('../models/posts');
 var httpCodes = require('http-status-codes');
 var moment = require('moment');
+const requestip = require('request-ip');
 
 const { check, validationResult } = require('express-validator');
 
@@ -52,7 +53,7 @@ router.post('/addPost', [
     }
 
     const { post } = req.body;
-    const ipAddress = req.connection.remoteAddress;
+    const ipAddress = requestip.getClientIp(req);
 
     try {
 
@@ -67,12 +68,12 @@ router.post('/addPost', [
             let duration = dur.asMinutes();
 
             
-           if (duration < 60) {
-               return res.status(httpCodes.BAD_REQUEST).json({
-                   status: 'error',
-                   msg: 'Only 1 Post per hour'
-               })
-           }
+        //    if (duration < 60) {
+        //        return res.status(httpCodes.BAD_REQUEST).json({
+        //            status: 'error',
+        //            msg: 'Only 1 Post per hour'
+        //        })
+        //    }
 
         }
 
