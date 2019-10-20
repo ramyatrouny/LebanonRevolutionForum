@@ -32,14 +32,20 @@
         height: 45px;
         font-size: 12pt;
     }
-
-    .submitInput{
+    .submitInput {
         width: 100%;
     }
 }
 
+@media only screen and (max-width: 430px) {
+    .submitInput {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
 @media only screen and (max-width: 320px) {
-    .submissionPost{
+    .submissionPost {
         width: 90% !important;
     }
 }

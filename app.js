@@ -4,7 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
-//const rateLimit = require('express-rate-limit');
 
 const postsRoute = require('./routes/posts');
 const dbConnect = require('./config/db');
@@ -16,14 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(helmet());
-
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
-});
-app.use(limiter);
->>>>>>> 94347634dffc1c11b2a42f4302b24883d175715d
-// app.use(express.static(path.join(__dirname, 'public')));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, "client/build")));
