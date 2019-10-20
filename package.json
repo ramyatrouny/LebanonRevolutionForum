@@ -5,8 +5,9 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "client": "npm start --prefix client",
-    "server": "nodemon ./bin/www",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "NODE_ENV=production nodemon ./bin/www",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "concurrently": "^5.0.0",
